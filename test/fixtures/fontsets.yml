@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  base_name: MyString
+  base_size: 1.5
+  heart_name: MyString
+  heart_size: 1.5
+  cross_name: MyString
+  cross_size: 1.5
+  star_name: MyString
+  star_size: 1.5
+
+two:
+  name: MyString
+  base_name: MyString
+  base_size: 1.5
+  heart_name: MyString
+  heart_size: 1.5
+  cross_name: MyString
+  cross_size: 1.5
+  star_name: MyString
+  star_size: 1.5

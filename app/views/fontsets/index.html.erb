@@ -1,0 +1,39 @@
+<h1>Listing fontsets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Base name</th>
+    <th>Base size</th>
+    <th>Heart name</th>
+    <th>Heart size</th>
+    <th>Cross name</th>
+    <th>Cross size</th>
+    <th>Star name</th>
+    <th>Star size</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fontsets.each do |fontset| %>
+  <tr>
+    <td><%= fontset.name %></td>
+    <td><%= fontset.base_name %></td>
+    <td><%= fontset.base_size %></td>
+    <td><%= fontset.heart_name %></td>
+    <td><%= fontset.heart_size %></td>
+    <td><%= fontset.cross_name %></td>
+    <td><%= fontset.cross_size %></td>
+    <td><%= fontset.star_name %></td>
+    <td><%= fontset.star_size %></td>
+    <td><%= link_to 'Show', fontset %></td>
+    <td><%= link_to 'Edit', edit_fontset_path(fontset) %></td>
+    <td><%= link_to 'Destroy', fontset, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fontset', new_fontset_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>L1:</b>
+  <%= @order.l1 %>
+</p>
+
+<p>
+  <b>L2:</b>
+  <%= @order.l2 %>
+</p>
+
+<p>
+  <b>L3:</b>
+  <%= @order.l3 %>
+</p>
+
+<p>
+  <b>Fontset:</b>
+  <%= @order.fontset_id %>
+</p>
+
+<p>
+  <b>Project:</b>
+  <%= @order.project_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

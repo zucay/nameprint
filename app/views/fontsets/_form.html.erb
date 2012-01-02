@@ -1,0 +1,53 @@
+<%= form_for(@fontset) do |f| %>
+  <% if @fontset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fontset.errors.count, "error") %> prohibited this fontset from being saved:</h2>
+
+      <ul>
+      <% @fontset.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :base_name %><br />
+    <%= f.text_field :base_name %>
+  </div>
+  <div class="field">
+    <%= f.label :base_size %><br />
+    <%= f.text_field :base_size %>
+  </div>
+  <div class="field">
+    <%= f.label :heart_name %><br />
+    <%= f.text_field :heart_name %>
+  </div>
+  <div class="field">
+    <%= f.label :heart_size %><br />
+    <%= f.text_field :heart_size %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_name %><br />
+    <%= f.text_field :cross_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_size %><br />
+    <%= f.text_field :cross_size %>
+  </div>
+  <div class="field">
+    <%= f.label :star_name %><br />
+    <%= f.text_field :star_name %>
+  </div>
+  <div class="field">
+    <%= f.label :star_size %><br />
+    <%= f.text_field :star_size %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

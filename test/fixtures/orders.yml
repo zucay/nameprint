@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  l1: MyString
+  l2: MyString
+  l3: MyString
+  fontset_id: 1
+  project_id: 1
+
+two:
+  l1: MyString
+  l2: MyString
+  l3: MyString
+  fontset_id: 1
+  project_id: 1
