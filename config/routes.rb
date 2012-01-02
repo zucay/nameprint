@@ -1,7 +1,9 @@
 Nameprint::Application.routes.draw do
-  resources :projects
-
   resources :fontsets
+
+  resources :fonts
+
+  resources :projects
 
   resources :orders
 

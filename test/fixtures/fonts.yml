@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  font-family: MyString
+  font-size: 1.5
+  heart_font-family: MyString
+  heart_font-size: 1.5
+  font-family: MyString
+  font-size: 1.5
+  star_font-family: MyString
+  star_font-size: 1.5
+  cross_font-family: MyString
+  cross_font-size: 1.5
+
+two:
+  font-family: MyString
+  font-size: 1.5
+  heart_font-family: MyString
+  heart_font-size: 1.5
+  font-family: MyString
+  font-size: 1.5
+  star_font-family: MyString
+  star_font-size: 1.5
+  cross_font-family: MyString
+  cross_font-size: 1.5

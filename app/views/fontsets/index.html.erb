@@ -1,16 +1,9 @@
 <h1>Listing fontsets</h1>
 
-<table>
+<table border=1>
   <tr>
     <th>Name</th>
-    <th>Base name</th>
-    <th>Base size</th>
-    <th>Heart name</th>
-    <th>Heart size</th>
-    <th>Cross name</th>
-    <th>Cross size</th>
-    <th>Star name</th>
-    <th>Star size</th>
+    <th>Fontset</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,14 +12,11 @@
 <% @fontsets.each do |fontset| %>
   <tr>
     <td><%= fontset.name %></td>
-    <td><%= fontset.base_name %></td>
-    <td><%= fontset.base_size %></td>
-    <td><%= fontset.heart_name %></td>
-    <td><%= fontset.heart_size %></td>
-    <td><%= fontset.cross_name %></td>
-    <td><%= fontset.cross_size %></td>
-    <td><%= fontset.star_name %></td>
-    <td><%= fontset.star_size %></td>
+    <td>
+      L1: <%= fontset.l1.to_s %><br>
+      L2: <%= fontset.l2.to_s %><br>
+      L3: <%= fontset.l3.to_s %>
+    </td>
     <td><%= link_to 'Show', fontset %></td>
     <td><%= link_to 'Edit', edit_fontset_path(fontset) %></td>
     <td><%= link_to 'Destroy', fontset, confirm: 'Are you sure?', method: :delete %></td>

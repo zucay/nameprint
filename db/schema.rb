@@ -11,18 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120102021452) do
+ActiveRecord::Schema.define(:version => 20120102080512) do
+
+  create_table "fonts", :force => true do |t|
+    t.string   "font_family"
+    t.float    "font_size",         :default => 12.0
+    t.string   "heart_font_family"
+    t.float    "heart_font_size",   :default => 12.0
+    t.string   "star_font_family"
+    t.float    "star_font_size",    :default => 12.0
+    t.string   "cross_font_family"
+    t.float    "cross_font_size",   :default => 12.0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "fontsets", :force => true do |t|
     t.string   "name"
-    t.string   "base_name"
-    t.float    "base_size"
-    t.string   "heart_name"
-    t.float    "heart_size"
-    t.string   "cross_name"
-    t.float    "cross_size"
-    t.string   "star_name"
-    t.float    "star_size"
+    t.integer  "l1"
+    t.integer  "l2"
+    t.integer  "l3"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

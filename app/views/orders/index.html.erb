@@ -1,6 +1,6 @@
 <h1>Listing orders</h1>
 
-<table>
+<table border=1>
   <tr>
     <th>L1</th>
     <th>L2</th>
@@ -17,8 +17,8 @@
     <td><%= order.l1 %></td>
     <td><%= order.l2 %></td>
     <td><%= order.l3 %></td>
-    <td><%= order.fontset_id %></td>
-    <td><%= order.project_id %></td>
+    <td><%= order.fontset.name if order.fontset %></td>
+    <td><%= order.project.name if order.project %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>

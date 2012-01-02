@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :project_id %><br />
+    <%= f.select :project_id, Project.sel_projects %>
+  </div>
+  <div class="field">
     <%= f.label :l1 %><br />
     <%= f.text_field :l1 %>
   </div>
@@ -25,12 +29,9 @@
   </div>
   <div class="field">
     <%= f.label :fontset_id %><br />
-    <%= f.number_field :fontset_id %>
+    <%= f.select :fontset_id, Fontset.sel_fontsets %>
   </div>
-  <div class="field">
-    <%= f.label :project_id %><br />
-    <%= f.number_field :project_id %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

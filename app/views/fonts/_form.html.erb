@@ -1,0 +1,49 @@
+<%= form_for(@font) do |f| %>
+  <% if @font.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@font.errors.count, "error") %> prohibited this font from being saved:</h2>
+
+      <ul>
+      <% @font.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :font_family %><br />
+    <%= f.select :font_family, Font.sel_families %>
+  </div>
+  <div class="field">
+    <%= f.label :font_size %><br />
+    <%= f.text_field :font_size %>
+  </div>
+  <div class="field">
+    <%= f.label :heart_font_family %><br />
+    <%= f.select :heart_font_family, Font.sel_families %>
+  </div>
+  <div class="field">
+    <%= f.label :heart_font_size %><br />
+    <%= f.text_field :heart_font_size %>
+  </div>
+  <div class="field">
+    <%= f.label :star_font_family %><br />
+    <%= f.select :star_font_family, Font.sel_families %>
+  </div>
+  <div class="field">
+    <%= f.label :star_font_size %><br />
+    <%= f.text_field :star_font_size %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_font_family %><br />
+    <%= f.select :cross_font_family, Font.sel_families %>
+  </div>
+  <div class="field">
+    <%= f.label :cross_font_size %><br />
+    <%= f.text_field :cross_font_size %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

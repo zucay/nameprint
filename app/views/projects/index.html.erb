@@ -1,6 +1,6 @@
 <h1>Listing projects</h1>
 
-<table>
+<table border=1>
   <tr>
     <th>Name</th>
     <th>Template</th>
@@ -12,7 +12,7 @@
 <% @projects.each do |project| %>
   <tr>
     <td><%= project.name %></td>
-    <td><%= project.template %></td>
+    <td><%= project.template[0,100] %>...</td>
     <td><%= link_to 'Show', project %></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>

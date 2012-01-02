@@ -1,0 +1,37 @@
+<h1>Listing fonts</h1>
+
+<table border=1>
+  <tr>
+    <th>Font_family</th>
+    <th>Font_size</th>
+    <th>Heart font_family</th>
+    <th>Heart font_size</th>
+    <th>Star font_family</th>
+    <th>Star font_size</th>
+    <th>Cross font_family</th>
+    <th>Cross font_size</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fonts.each do |font| %>
+  <tr>
+    <td><%= font.font_family %></td>
+    <td><%= font.font_size %></td>
+    <td><%= font.heart_font_family %></td>
+    <td><%= font.heart_font_size %></td>
+    <td><%= font.star_font_family %></td>
+    <td><%= font.star_font_size %></td>
+    <td><%= font.cross_font_family %></td>
+    <td><%= font.cross_font_size %></td>
+    <td><%= link_to 'Show', font %></td>
+    <td><%= link_to 'Edit', edit_font_path(font) %></td>
+    <td><%= link_to 'Destroy', font, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Font', new_font_path %>
