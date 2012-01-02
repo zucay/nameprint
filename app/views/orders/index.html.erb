@@ -7,6 +7,7 @@
     <th>L3</th>
     <th>Fontset</th>
     <th>Project</th>
+    <th>Done</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
     <td><%= order.l3 %></td>
     <td><%= order.fontset.name if order.fontset %></td>
     <td><%= order.project.name if order.project %></td>
+    <td><%= order.done %></td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>
@@ -28,4 +30,5 @@
 
 <br />
 
-<%= link_to 'New Order', new_order_path %>
+<%= link_to 'New Order', new_order_path %> | 
+<%= link_to 'CREATE SVG', :action=>'to_svg' %>

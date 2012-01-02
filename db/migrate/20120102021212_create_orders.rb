@@ -6,7 +6,7 @@ class CreateOrders < ActiveRecord::Migration
       t.string :l3
       t.integer :fontset_id
       t.integer :project_id
-      t.boolean :done
+      t.boolean :done, :default => 0
       t.string :lot
 
       t.timestamps

@@ -5,7 +5,9 @@ Nameprint::Application.routes.draw do
 
   resources :projects
 
+  match 'orders/to_svg' => 'orders#to_svg'
   resources :orders
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

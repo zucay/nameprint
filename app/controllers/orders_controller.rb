@@ -2,11 +2,13 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.where("done <> 0")
+    #@orders = Order.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
+      format.xml { }
     end
   end
 
@@ -79,5 +81,15 @@ class OrdersController < ApplicationController
       format.html { redirect_to orders_url }
       format.json { head :ok }
     end
+  end
+
+  def to_svg
+    pj_id = 1
+    pj = Project.find(pj_id)
+    @orders = Order.where('done = 0 and project_id = ?', pj_id).first(pj.num)
+    str = pj.to_s_svg(@orders)
+    lot = pj.lot
+    send_data(str, :type =>'image/svg+xml', :filename => "#{lot}.svg")
+
   end
 end

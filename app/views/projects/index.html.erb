@@ -3,7 +3,9 @@
 <table border=1>
   <tr>
     <th>Name</th>
+    <th>Abbr</th>
     <th>Template</th>
+    <th>num</th>
     <th></th>
     <th></th>
     <th></th>
@@ -12,7 +14,9 @@
 <% @projects.each do |project| %>
   <tr>
     <td><%= project.name %></td>
+    <td><%= project.abbr %></td>
     <td><%= project.template[0,100] %>...</td>
+    <td><%= project.num %></td>
     <td><%= link_to 'Show', project %></td>
     <td><%= link_to 'Edit', edit_project_path(project) %></td>
     <td><%= link_to 'Destroy', project, confirm: 'Are you sure?', method: :delete %></td>
