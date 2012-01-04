@@ -17,7 +17,7 @@ Excelからコピペしてください<br>
 
 
 <br>
-Order 
+オーダー履歴 
 <%= link_to 'New Order', new_order_path %> | 
 <%= link_to 'CREATE SVG', :action=>'to_svg' %>
 
@@ -52,4 +52,7 @@ Order
 </table>
 
 <br />
-
+| 
+<%= link_to 'Projects', url_for(:controller=>'projects', :action=>'index')%> | 
+<%= link_to 'FontSets', url_for(:controller=>'fontsets', :action=>'index')%> | 
+<%= link_to 'Fonts', url_for(:controller=>'fonts', :action=>'index')%> | 
