@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
   belongs_to :project
   def self.done(orders, lot)
     orders.each do |order|
-      order.done = true
+      order.done = 1
       order.lot = lot
       order.save
     end

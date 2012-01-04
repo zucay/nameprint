@@ -18,6 +18,22 @@ Fontset.create({ :name => 'a',
                  :l2 => 1,
                  :l3 => 1
                })
+Fontset.create({ :name => 'b',
+                 :l1 => 1,
+                 :l2 => 1,
+                 :l3 => 1
+               })
+Fontset.create({ :name => 'c',
+                 :l1 => 1,
+                 :l2 => 1,
+                 :l3 => 1
+               })
+Fontset.create({ :name => 'd',
+                 :l1 => 1,
+                 :l2 => 1,
+                 :l3 => 1
+               })
+
 Order.create({ :l1 => 'Yuta#Lina',
                :l2 => '2011/12/29',
                :l3 => '\(^o^)/',

@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20120102080512) do
     t.string   "l3"
     t.integer  "fontset_id"
     t.integer  "project_id"
-    t.boolean  "done",       :default => false
+    t.integer  "done",       :default => 0
     t.string   "lot"
     t.datetime "created_at"
     t.datetime "updated_at"
