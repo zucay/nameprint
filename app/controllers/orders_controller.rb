@@ -2,9 +2,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.where("done <> 0")
-    #@orders = Order.all
-
+    @orders = Order.last(200)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
@@ -86,10 +84,10 @@ class OrdersController < ApplicationController
   def to_svg
     pj_id = 1
     pj = Project.find(pj_id)
-    @orders = Order.where('done = 0 and project_id = ?', pj_id).first(pj.num)
+    @orders = Order.where('done = ? and project_id = ?', 'f', pj_id).first(pj.num)
     str = pj.to_s_svg(@orders)
     lot = pj.lot
     send_data(str, :type =>'image/svg+xml', :filename => "#{lot}.svg")
-
+    Order.done(@orders, lot)
   end
 end

@@ -31,7 +31,10 @@
     <%= f.label :fontset_id %><br />
     <%= f.select :fontset_id, Fontset.sel_fontsets %>
   </div>
-
+  <div class="field">
+    <%= f.label :done %><br />
+    <%= f.select :done, [['false', 'false'],['true','true']] %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
