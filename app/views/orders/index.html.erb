@@ -1,4 +1,25 @@
 <h1>Listing orders</h1>
+Excelからコピペしてください<br>
+(書体　L1 L2 L3 の4カラム)
+<%= form_tag({:action => 'import_tsv'}) do |f| %>
+  <div class="field">
+    <%= text_area_tag 'tsv', nil, :rows=>10, :cols=>80 %>
+  </div>
+  <div class="field">
+    プロジェクト：
+    <%= select_tag 'project',options_from_collection_for_select((Project.all), 'id', 'name') %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'オーダー登録' %>
+  </div>
+<% end %>
+
+
+<br>
+Order 
+<%= link_to 'New Order', new_order_path %> | 
+<%= link_to 'CREATE SVG', :action=>'to_svg' %>
 
 <table border=1>
   <tr>
@@ -32,5 +53,3 @@
 
 <br />
 
-<%= link_to 'New Order', new_order_path %> | 
-<%= link_to 'CREATE SVG', :action=>'to_svg' %>

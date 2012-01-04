@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.last(200)
+    @orders = Order.limit(200).order('created_at DESC')
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @orders }
@@ -89,5 +89,25 @@ class OrdersController < ApplicationController
     lot = pj.lot
     send_data(str, :type =>'image/svg+xml', :filename => "#{lot}.svg")
     Order.done(@orders, lot)
+  end
+  def import_tsv
+    p 'hoge'
+    pj_id = params[:project]
+    lines =  params[:tsv].split("\r\n")
+    lines.each do |line|
+      row = line.split("\t")
+      p row.size
+      if(row.size >= 4 )
+        r = Order.new
+        r.fontset = Fontset.find_by_name(row[0])
+        r.l1 = row[1]
+        r.l2 = row[2]
+        r.l3 = row[3]
+        r.project_id = pj_id
+        r.save
+      end
+    end
+
+    redirect_to(:action => :index)
   end
 end
