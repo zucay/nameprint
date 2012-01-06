@@ -23,6 +23,7 @@ Excelからコピペしてください<br>
 
 <table border=1>
   <tr>
+    <ht>ID</th>
     <th>L1</th>
     <th>L2</th>
     <th>L3</th>
@@ -37,6 +38,7 @@ Excelからコピペしてください<br>
 
 <% @orders.each do |order| %>
   <tr>
+    <td><%= order.id %></td>
     <td><%= order.l1 %></td>
     <td><%= order.l2 %></td>
     <td><%= order.l3 %></td>
