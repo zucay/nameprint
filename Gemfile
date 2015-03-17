@@ -34,9 +34,11 @@ end
 gem 'pg'
 group :development, :test do
   gem 'sqlite3'
+  gem 'pry'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
-	
-group :production do
 
-  gem 'therubyracer-heroku'
+group :production do
+#  gem 'therubyracer-heroku'
 end
