@@ -18,5 +18,4 @@
 log/*.log
 tmp/
 doc/*
-bin/*
 vendor/bundle/*
