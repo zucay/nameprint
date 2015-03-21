@@ -47,6 +47,7 @@ class TemplateMaker
         if(ele.text == pair[0])
           ele.text = ''
           str = instance_eval("order.#{pair[1]}")
+
           font = instance_eval("order.fontset.#{pair[1]}font")
           maketag(ele, str, font)
           break
