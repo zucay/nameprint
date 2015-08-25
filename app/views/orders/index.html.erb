@@ -13,13 +13,18 @@ Excelからコピペしてください<br>
   <div class="actions">
     <%= submit_tag 'オーダー登録' %>
   </div>
+  <% end %>
+
+<%= form_tag(action: 'to_svg') do |f| %>
+  <div class="actions">
+    <%= submit_tag 'オーダーをSVGファイルにしてダウンロード' %>
+  </div>
 <% end %>
 
 
 <br>
-オーダー履歴 
-<%= link_to 'New Order', new_order_path %> | 
-<%= link_to 'CREATE SVG', :action=>'to_svg' %>
+オーダー履歴
+
 
 <table border=1>
   <tr>
@@ -54,7 +59,3 @@ Excelからコピペしてください<br>
 </table>
 
 <br />
-| 
-<%= link_to 'Projects', url_for(:controller=>'projects', :action=>'index')%> | 
-<%= link_to 'FontSets', url_for(:controller=>'fontsets', :action=>'index')%> | 
-<%= link_to 'Fonts', url_for(:controller=>'fonts', :action=>'index')%> | 
