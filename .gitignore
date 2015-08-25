@@ -19,3 +19,4 @@ log/*.log
 tmp/
 doc/*
 vendor/bundle/*
+*.DS_Store
