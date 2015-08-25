@@ -82,10 +82,13 @@ class OrdersController < ApplicationController
   end
 
   def to_svg()
-    pj_id = params[:project_id]
-    pj_id ||= 1
-    pj = Project.find(pj_id)
-    @orders = Order.where('done = ? and project_id = ?', 0, pj_id).first(pj.num)
+    begin
+      pj = Order.where('done = ?', 0).last.project
+    rescue
+      flash[:notice] = 'SVG作成済みです'
+      redirect_to action: :index and return
+    end
+    @orders = Order.where('done = ? and project_id = ?', 0, pj.id).first(pj.num)
     p @orders.size
     str = pj.to_s_svg(@orders)
     lot = pj.lot
@@ -93,6 +96,7 @@ class OrdersController < ApplicationController
     send_data(str, :type =>'image/svg+xml', :filename => "#{lot}.svg")
     return
   end
+
   def import_tsv
     p 'hoge'
     pj_id = params[:project]

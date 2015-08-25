@@ -8,8 +8,8 @@ Nameprint::Application.routes.draw do
   resources :projects
 
   resources :orders do
-    get 'to_svg', on: :collection
-    get 'import_tsv', on: :collection
+    post 'to_svg', on: :collection
+    post 'import_tsv', on: :collection
   end
 
   # The priority is based upon order of creation:
