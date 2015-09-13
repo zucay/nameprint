@@ -1,4 +1,16 @@
-<h1>Listing orders</h1>
+<div class="header" id="header">
+   <h1 class="site_title" id="site_title">Nameprint</h1>
+   <ul class="header-item tabs" id="tabs">
+     <li id="admin"><a href="/admin">Admin</a></li>
+   </ul>
+ </div>
+ <div class="title_bar" id="title_bar">
+   <div id="titlebar_left">
+     <h2 id="page_title">Listing orders</h2>
+   </div>
+   <div id="titlebar_right"></div>
+ </div>
+<div class="wrapper">
 Excelからコピペしてください<br>
 (書体　L1 L2 L3 の4カラム)
 <%= form_tag({:action => 'import_tsv'}) do |f| %>
@@ -59,3 +71,4 @@ Excelからコピペしてください<br>
 </table>
 
 <br />
+</div>
