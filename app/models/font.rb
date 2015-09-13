@@ -1,16 +1,5 @@
 # -*- coding: utf-8 -*-
 class Font < ActiveRecord::Base
-
-  def self.sel_families
-    [['Garamond', 'Garamond'],
-     ['Liberate','Liberate'],
-     ['LiberateWide', 'LiberateWide'],
-     ['GhandiCondensed','GhandiCondensed'],
-     ['Bernie','Bernie'],
-     ['KozGoPro-Regular-90ms-RKSJ-H', 'KozGoPro-Regular-90ms-RKSJ-H']
-    ]
-  end
-
   def self.sel_fonts
     self.all.map{ |ele| [ele.to_s, ele.id]}
   end

@@ -20,3 +20,4 @@ tmp/
 doc/*
 vendor/bundle/*
 *.DS_Store
+.env
