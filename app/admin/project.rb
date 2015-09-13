@@ -13,6 +13,6 @@ ActiveAdmin.register Project do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+  permit_params %w[name abbr template num]
 
 end

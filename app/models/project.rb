@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 class Project < ActiveRecord::Base
+  has_many :orders
+  
   def self.sel_projects
     self.all.map{ |ele| [ele.name, ele.id]}
   end
@@ -69,9 +71,9 @@ class TemplateMaker
       else
         char = [$2, font.font_family, font.font_size]
       end
-      
+
       ele.add_element('tspan', {'font-family' => "'#{char[1]}'", 'font-size' => "'#{char[2]}'" }).add_text(char[0])
-      
+
       str = $3
     end
 

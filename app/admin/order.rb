@@ -13,6 +13,6 @@ ActiveAdmin.register Order do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-
+  permit_params %w[l1 l2 l3 fontset_id project_id]
 
 end

@@ -14,5 +14,6 @@ ActiveAdmin.register Fontset do
   #   permitted
   # end
 
+  permit_params %w[name l1font_id l2font_id l3font_id]
 
 end
