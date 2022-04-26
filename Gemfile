@@ -41,7 +41,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.6'
 end
 
 gem 'pg'
@@ -54,3 +54,4 @@ gem 'dotenv-rails'
 # 2022-04-26
 # https://qiita.com/blackpeach7/items/fb131ce9ebdb6b47beec
 gem 'bigdecimal', '1.4.2'
+ gem 'duktape'
