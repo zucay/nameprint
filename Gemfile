@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.11.3'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
@@ -47,6 +47,6 @@ end
 gem 'pg'
 gem 'better_errors', group: :development
 gem 'binding_of_caller', group: :development
-gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'activeadmin'
 gem 'devise'
 gem 'dotenv-rails'
