@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.9'
+ruby '2.7.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.11.3'
@@ -53,4 +53,4 @@ gem 'dotenv-rails'
 
 # 2022-04-26
 # https://qiita.com/blackpeach7/items/fb131ce9ebdb6b47beec
-gem 'bigdecimal', '1.4'
+gem 'bigdecimal', '1.4.2'

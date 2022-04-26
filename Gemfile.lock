@@ -56,6 +56,7 @@ GEM
       coderay (>= 1.0.0)
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
+    bigdecimal (1.4.2)
     binding_of_caller (1.0.0)
       debug_inspector (>= 0.0.1)
     builder (3.2.4)
@@ -221,6 +222,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   better_errors
+  bigdecimal (= 1.4.2)
   binding_of_caller
   byebug
   coffee-rails (~> 4.1.0)
@@ -239,7 +241,7 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 RUBY VERSION
-   ruby 2.6.9
+   ruby 2.7.5p203
 
 BUNDLED WITH
    2.0.0.pre.3
